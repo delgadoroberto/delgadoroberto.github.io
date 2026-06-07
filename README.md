@@ -28,7 +28,7 @@ Currently working as a Senior Cybersecurity Consultant, helping organizations st
 
 ## 🌐 Website & Contact
 
-<p align="left">
+<p align="center">
 
 <a href="https://www.linkedin.com/in/delgado-roberto/">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
