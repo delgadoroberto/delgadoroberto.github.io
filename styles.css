@@ -3,13 +3,14 @@
   --bg: #030609; 
   
   /* Typography and colors */
-  --text: #d6e2ea; 
+  /* CHANGED: Soft pale teal/bluish-green instead of harsh white */
+  --text: #b2d8d6; 
   --subtext: #7fa2b8; 
   
   /* Cyan accent (from reference image) */
   --accent: #16c7c7; 
   
-  /* Cards and borders (from reference image) */
+  /* Cards and borders */
   --card: #051015; 
   --line: var(--accent); 
 }
@@ -27,7 +28,6 @@ body.light {
 /* BASE STYLES */
 body {
   margin: 0;
-  /* Inter as primary font for a clean, modern tech look */
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
   background-color: var(--bg);
   color: var(--text);
@@ -55,21 +55,30 @@ body {
 
 .header h1 {
   margin: 0;
-  font-size: 38px;
+  font-size: 42px; /* Slightly larger prominent name */
   font-weight: 700;
-  color: var(--text);
+  color: #ffffff; /* Kept white for contrast against the main text */
 }
 
-.header h2 {
+/* NEW: Layered Header Title Styles (Matching traditional CV structure) */
+.header h2.main-title {
   color: var(--accent); 
+  font-weight: 600;
+  font-size: 24px; /* Larger subtitle line */
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+.header p.subtitle {
+  color: var(--subtext);
   font-weight: 500;
-  font-size: 20px;
-  margin-top: 10px;
+  font-size: 16px; /* Smaller tertiary line */
+  margin: 0;
 }
 
 /* LINKS & NAVIGATION */
 .links {
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +86,6 @@ body {
   gap: 20px; 
 }
 
-/* Text links with arrows inspired by reference image */
 .links a, .job-meta a, .cert-list a {
   text-decoration: none;
   color: var(--accent);
@@ -85,21 +93,36 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .links a:hover, .job-meta a:hover, .cert-list a:hover {
-  color: var(--text);
+  color: #ffffff;
 }
 
-/* ICON STYLES (Inline SVGs) */
+/* NEW: Highlighted Header CTA for "Let's Connect" */
+.links a.header-cta {
+  background-color: #0d2133;
+  border: 1px solid var(--accent);
+  padding: 6px 16px;
+  border-radius: 20px; /* Pill style wrapper */
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.links a.header-cta:hover {
+  background-color: var(--accent);
+  color: #030609 !important;
+}
+
+/* ICON STYLES */
 .icon {
   width: 18px; 
   height: 18px;
   color: currentColor;
 }
 
-/* CARDS WITH CYAN BORDERS (Reference image style) */
+/* CARDS WITH CYAN BORDERS */
 section {
   margin-bottom: 40px;
 }
@@ -112,13 +135,12 @@ section {
   transition: none;
 }
 
-/* Accessibility focus state */
 .card:focus-within {
-  border-color: var(--text);
-  box-shadow: 0 0 0 2px var(--text);
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px #ffffff;
 }
 
-/* TITLES WITH STAR DECORATION (Reference image style) */
+/* TITLES WITH STAR DECORATION */
 h3, h4 {
   color: var(--accent);
   margin-top: 0;
@@ -128,7 +150,7 @@ h3, h4 {
 }
 
 h3::before, h4::before {
-  content: "✧"; /* Unicode star icon */
+  content: "✧"; 
   font-size: 1.2em;
 }
 
@@ -186,7 +208,6 @@ li {
   margin-bottom: 12px;
 }
 
-/* Append an arrow indicator for external links */
 .cert-list a::after {
   content: " →";
   font-size: 1em;
@@ -200,7 +221,6 @@ li {
   gap: 20px 40px;
 }
 
-/* Remove the star icon decoration for grid subheadings */
 .tech-item h4::before {
     content: ""; 
     gap: 0;
@@ -226,12 +246,12 @@ li {
 }
 
 /* ================================================== */
-/* BUTTONS & CALL TO ACTION (Reference image style)  */
+/* BUTTONS & CALL TO ACTION                           */
 /* ================================================== */
 
 /* Primary CTA Button */
 .cta-btn {
-  background-color: #0d2133; /* Deep teal background */
+  background-color: #0d2133; 
   color: var(--accent) !important;
   border: 1px solid var(--accent); 
   padding: 12px 20px;
@@ -245,22 +265,19 @@ li {
 
 .cta-btn:hover {
   background-color: #0d2133e0;
-  color: var(--text) !important;
+  color: #ffffff !important;
 }
 
-/* Prepend star icon */
 .cta-btn::before {
   content: "✧";
   font-size: 1.2em;
 }
 
-/* Append arrow icon */
 .cta-btn::after {
   content: " →";
   font-size: 1.2em;
 }
 
-/* Secondary text link style */
 .links a.text-link, .job-meta a.text-link {
     color: var(--accent);
     font-weight: 500;
@@ -280,7 +297,7 @@ li {
     max-width: 700px;
     margin: 60px auto 0 auto;
     padding: 40px;
-    background-color: #020406; /* Slightly distinct dark background for emphasis */
+    background-color: #020406; 
     border-radius: 12px;
 }
 
