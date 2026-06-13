@@ -3,11 +3,10 @@
   --bg: #030609; 
   
   /* Typography and colors */
-  /* CHANGED: Soft pale teal/bluish-green instead of harsh white */
-  --text: #b2d8d6; 
+  --text: #b2d8d6; /* Soft pale teal/bluish-green for main text */
   --subtext: #7fa2b8; 
   
-  /* Cyan accent (from reference image) */
+  /* Cyan accent */
   --accent: #16c7c7; 
   
   /* Cards and borders */
@@ -55,16 +54,19 @@ body {
 
 .header h1 {
   margin: 0;
-  font-size: 42px; /* Slightly larger prominent name */
+  font-size: 42px; 
   font-weight: 700;
-  color: #ffffff; /* Kept white for contrast against the main text */
+  color: #ffffff; 
 }
 
-/* NEW: Layered Header Title Styles (Matching traditional CV structure) */
+body.light .header h1 {
+  color: var(--text);
+}
+
 .header h2.main-title {
   color: var(--accent); 
   font-weight: 600;
-  font-size: 24px; /* Larger subtitle line */
+  font-size: 24px; 
   margin-top: 12px;
   margin-bottom: 6px;
 }
@@ -72,7 +74,7 @@ body {
 .header p.subtitle {
   color: var(--subtext);
   font-weight: 500;
-  font-size: 16px; /* Smaller tertiary line */
+  font-size: 16px; 
   margin: 0;
 }
 
@@ -100,12 +102,16 @@ body {
   color: #ffffff;
 }
 
-/* NEW: Highlighted Header CTA for "Let's Connect" */
+body.light .links a:hover {
+  color: var(--text);
+}
+
+/* Highlighted Header CTA for "Let's Connect" */
 .links a.header-cta {
   background-color: #0d2133;
   border: 1px solid var(--accent);
   padding: 6px 16px;
-  border-radius: 20px; /* Pill style wrapper */
+  border-radius: 20px; 
   color: var(--accent);
   font-weight: 600;
 }
@@ -132,7 +138,7 @@ section {
   border: 1px solid var(--line); 
   border-radius: 12px; 
   padding: 30px; 
-  transition: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .card:focus-within {
@@ -155,7 +161,7 @@ h3::before, h4::before {
 }
 
 h4 {
-  margin-bottom: 6px;
+  margin-bottom: 12px;
   font-weight: 600;
 }
 
@@ -214,16 +220,45 @@ li {
   color: var(--accent);
 }
 
-/* TECHNICAL STACK GRID */
+/* IMPROVED: HARMONIOUS TECH STACK PRESENTATION */
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px 40px;
+  gap: 25px 40px;
 }
 
 .tech-item h4::before {
-    content: ""; 
-    gap: 0;
+  content: ""; 
+  gap: 0;
+}
+
+.tech-item h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Tech Badges Container */
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Individual Tech Badge */
+.tech-badge {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: rgba(22, 199, 199, 0.08); /* Transparent cian tint */
+  border: 1px solid rgba(22, 199, 199, 0.25);
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+body.light .tech-badge {
+  background-color: rgba(2, 132, 199, 0.05);
+  border: 1px solid rgba(2, 132, 199, 0.2);
 }
 
 /* THEME TOGGLE BUTTON */
@@ -254,18 +289,18 @@ li {
   background-color: #0d2133; 
   color: var(--accent) !important;
   border: 1px solid var(--accent); 
-  padding: 12px 20px;
-  border-radius: 6px;
+  padding: 12px 24px;
+  border-radius: 30px; /* Pill layout matching header look */
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .cta-btn:hover {
-  background-color: #0d2133e0;
-  color: #ffffff !important;
+  background-color: var(--accent);
+  color: #030609 !important;
 }
 
 .cta-btn::before {
@@ -279,36 +314,36 @@ li {
 }
 
 .links a.text-link, .job-meta a.text-link {
-    color: var(--accent);
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  color: var(--accent);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .links a.text-link::after, .job-meta a.text-link::after {
-    content: " →";
-    font-size: 1.2em;
+  content: " →";
+  font-size: 1.2em;
 }
 
-/* Conclusion Section card */
+/* IMPROVED: Responsive Conclusion Section Card */
 #conclusion {
-    text-align: center;
-    max-width: 700px;
-    margin: 60px auto 0 auto;
-    padding: 40px;
-    background-color: #020406; 
-    border-radius: 12px;
+  max-width: 860px;
+  margin: 60px auto 0 auto;
+  text-align: center;
 }
 
 #conclusion h3 {
-    justify-content: center;
+  justify-content: center;
 }
 
 #conclusion p {
-    font-size: 16px;
-    color: var(--text);
-    margin-bottom: 30px;
+  font-size: 16px;
+  color: var(--text); /* Fully dynamic text readability */
+  margin-bottom: 25px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* RESPONSIVE MEDIA QUERIES */
@@ -328,9 +363,10 @@ li {
 
   .tech-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .links {
-      gap: 10px;
+    gap: 10px;
   }
 }
