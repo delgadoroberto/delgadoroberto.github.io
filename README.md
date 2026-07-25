@@ -3,7 +3,7 @@
 # 👋 Hi there, I'm Roberto Delgado
 
 <p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Inter&size=24&duration=3000&pause=1000&color=16C7C7&center=true&vCenter=true&width=900&lines=Senior+Cybersecurity+Consultant;Cloud+%26+Infrastructure+Security;DevSecOps+%26+Security+Automation;Security+Engineering+%26+Vulnerability+Management" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Inter&size=24&duration=3000&pause=1000&color=16C7C7&center=true&vCenter=true&width=900&lines=Cybersecurity+Engineer;Cloud+%26+Infrastructure+Security;DevSecOps+%26+CI%2FCD+Security;Vulnerability+Management+%26+Hardening" />
 </p>
 
 </div>
