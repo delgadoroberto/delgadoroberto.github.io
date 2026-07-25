@@ -14,7 +14,7 @@
 
 Cybersecurity professional with 12+ years of experience in cloud security engineering, infrastructure hardening, and technical vulnerability management across enterprise environments.
 
-Currently working as a Senior Cybersecurity Consultant dedicated to engineering secure architectures, hardening infrastructure baselines, and scaling secure cloud environments. Active hands-on practitioner leveraging personal labs to design automated DevSecOps pipelines and cloud security architectures.
+Currently dedicated to building secure architectures, hardening infrastructure baselines, and scaling secure cloud environments. Active hands-on practitioner leveraging personal labs to design automated DevSecOps pipelines and cloud security solutions.
 
 ---
 
