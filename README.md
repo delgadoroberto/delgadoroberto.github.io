@@ -21,14 +21,14 @@ Currently dedicated to building secure architectures, hardening infrastructure b
 ## 🌐 Website & Contact
 
 <p align="center">
-<a href="https://www.linkedin.com/in/delgado-roberto/">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
-</a>
 <a href="https://delgadoroberto.github.io/">
-  <img src="https://img.shields.io/badge/Cybersecurity_CV-0F172A?style=for-the-badge&logo=readme&logoColor=white">
+  <img src="https://img.shields.io/badge/Cybersecurity_CV-1F2937?style=for-the-badge&logo=githubpages&logoColor=white">
 </a>
 <a href="https://github.com/delgadoroberto">
-  <img src="https://img.shields.io/badge/GitHub_Profile-181717?style=for-the-badge&logo=github&logoColor=white">
+  <img src="https://img.shields.io/badge/GitHub_Profile-374151?style=for-the-badge&logo=github&logoColor=white">
+</a>
+<a href="https://www.linkedin.com/in/delgado-roberto/">
+  <img src="https://img.shields.io/badge/LinkedIn-2563EB?style=for-the-badge&logo=linkedin&logoColor=white">
 </a>
 </p>
 
